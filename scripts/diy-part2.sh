@@ -185,9 +185,9 @@ cp -rf ../../kiddin9/luci-app-rtbwmon/* luci-app-rtbwmon
 # cp -rf ../../kiddin9/v2ray-plugin/* v2ray-plugin
 # cp -rf ../../kiddin9/trojan/* trojan
 #Passwall和Passwall2
-# svn export https://github.com/xiaorouji/openwrt-passwall/trunk openwrt-passwall
-# svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall
-# svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
+svn export https://github.com/xiaorouji/openwrt-passwall/trunk openwrt-passwall
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall
+svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
 #VSSR（Hello Word）
 # svn export https://github.com/jerrykuku/lua-maxminddb/trunk lua-maxminddb
 # svn export https://github.com/jerrykuku/luci-app-vssr/trunk luci-app-vssr
@@ -209,11 +209,11 @@ fi
 
 # 去广告
 #ADGuardHome（kiddin9）
-mkdir luci-app-adguardhome
-cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
-cp -rf ../../MyConfig/configs/istoreos/general/applications/luci-app-adguardhome/* luci-app-adguardhome
-sed -i 's/拦截DNS服务器/拦截DNS服务器（默认用户名和密码均为root）/' luci-app-adguardhome/po/zh_Hans/adguardhome.po
-#sed -i 's/+PACKAGE_$(PKG_NAME)_INCLUDE_binary:adguardhome//' luci-app-adguardhome/Makefile
+# mkdir luci-app-adguardhome
+# cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
+# cp -rf ../../MyConfig/configs/istoreos/general/applications/luci-app-adguardhome/* luci-app-adguardhome
+# sed -i 's/拦截DNS服务器/拦截DNS服务器（默认用户名和密码均为root）/' luci-app-adguardhome/po/zh_Hans/adguardhome.po
+# sed -i 's/+PACKAGE_$(PKG_NAME)_INCLUDE_binary:adguardhome//' luci-app-adguardhome/Makefile
 #ADGuardHome（kenzok8）
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/adguardhome
 # svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
@@ -263,28 +263,28 @@ sed -i 's/拦截DNS服务器/拦截DNS服务器（默认用户名和密码均为
 # svn export https://github.com/destan19/OpenAppFilter/trunk OpenAppFilter
 
 # 5G通信模组拨号工具
-mkdir quectel_QMI_WWAN
+# mkdir quectel_QMI_WWAN
 # mkdir fibocom_QMI_WWAN
 # mkdir meig_QMI_WWAN
 # mkdir tw_QMI_WWAN
-mkdir quectel_cm_5G
-mkdir quectel_MHI
+# mkdir quectel_cm_5G
+# mkdir quectel_MHI
 # mkdir luci-app-hypermodem
-cp -rf ../../Modem-Support/quectel_QMI_WWAN/* quectel_QMI_WWAN
+# cp -rf ../../Modem-Support/quectel_QMI_WWAN/* quectel_QMI_WWAN
 # cp -rf ../../Modem-Support/fibocom_QMI_WWAN/* fibocom_QMI_WWAN
 # cp -rf ../../Modem-Support/meig_QMI_WWAN/* meig_QMI_WWAN
 # cp -rf ../../Modem-Support/tw_QMI_WWAN/* tw_QMI_WWAN
-cp -rf ../../Modem-Support/quectel_cm_5G/* quectel_cm_5G
-cp -rf ../../Modem-Support/quectel_MHI/* quectel_MHI
+# cp -rf ../../Modem-Support/quectel_cm_5G/* quectel_cm_5G
+# cp -rf ../../Modem-Support/quectel_MHI/* quectel_MHI
 # cp -rf ../../Modem-Support/luci-app-hypermodem/* luci-app-hypermodem
 
 # 5G模组短信插件
 # cp -rf temp/luci-app-sms-tool/* luci-app-sms-tool
-mkdir sms-tool
-mkdir luci-app-sms-tool
-cp -rf ../../Modem-Support/sms-tool/* sms-tool
-cp -rf ../../Modem-Support/luci-app-sms-tool/* luci-app-sms-tool
-cp -rf ../../MyConfig/configs/istoreos/general/applications/luci-app-sms-tool/* luci-app-sms-tool
+# mkdir sms-tool
+# mkdir luci-app-sms-tool
+# cp -rf ../../Modem-Support/sms-tool/* sms-tool
+# cp -rf ../../Modem-Support/luci-app-sms-tool/* luci-app-sms-tool
+# cp -rf ../../MyConfig/configs/istoreos/general/applications/luci-app-sms-tool/* luci-app-sms-tool
 
 # 5G模组信息插件
 # svn export https://github.com/qiuweichao/luci-app-modem-info/trunk/luci-app-3ginfo-lite
@@ -292,14 +292,14 @@ cp -rf ../../MyConfig/configs/istoreos/general/applications/luci-app-sms-tool/* 
 # svn export https://github.com/owner888/luci-app-3ginfo-zh_cn/trunk/luci-app-3ginfo
 
 # 5G模组IPv6
-mkdir ndisc
-cp -rf ../../Modem-Support/ndisc/* ndisc
+# mkdir ndisc
+# cp -rf ../../Modem-Support/ndisc/* ndisc
 
 # 5G模组信息插件+AT工具
-mkdir luci-app-modem
-cp -rf ../../Modem-Support/luci-app-modem/* luci-app-modem
-rm -rf ../../Modem-Support/luci-app-modem/po/zh_Hans #解决汉化问题
-popd
+# mkdir luci-app-modem
+# cp -rf ../../Modem-Support/luci-app-modem/* luci-app-modem
+# rm -rf ../../Modem-Support/luci-app-modem/po/zh_Hans #解决汉化问题
+# popd
 
 # 5G模组拨号脚本
 # mkdir -p package/base-files/files/root/5GModem
@@ -356,31 +356,31 @@ echo "
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
 
 #Passwall和Passwall2
-# CONFIG_PACKAGE_luci-app-passwall2=y
-# CONFIG_PACKAGE_luci-app-passwall=y
-# CONFIG_PACKAGE_luci-app-passwall_Transparent_Proxy=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Haproxy=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_IPv6_Nat=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Kcptun=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Server=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_SingBox=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
-# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin=y
-# CONFIG_PACKAGE_luci-app-haproxy-tcp=y
+CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-passwall_Transparent_Proxy=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Haproxy=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_IPv6_Nat=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Kcptun=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Client=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Server=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_SingBox=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin=y
+CONFIG_PACKAGE_luci-app-haproxy-tcp=y
 
 #VSSR（HelloWord）
 # CONFIG_PACKAGE_luci-app-vssr=y
@@ -461,7 +461,7 @@ echo "
 # 其他
 echo "
 # CONFIG_PACKAGE_luci-app-pushbot=y
-CONFIG_PACKAGE_luci-app-socat=y
+# CONFIG_PACKAGE_luci-app-socat=y
 # CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 # CONFIG_PACKAGE_luci-app-uugamebooster=y
 # CONFIG_PACKAGE_luci-app-xlnetacc=y
@@ -487,7 +487,7 @@ echo "
 # CONFIG_PACKAGE_ext-rooter-basic=y
 
 # 5G模组短信插件
-CONFIG_PACKAGE_luci-app-sms-tool=y
+# CONFIG_PACKAGE_luci-app-sms-tool=y
 
 # 5G模组信息插件
 # CONFIG_PACKAGE_luci-app-3ginfo-lite=y
@@ -496,9 +496,9 @@ CONFIG_PACKAGE_luci-app-sms-tool=y
 # 5G模组信息插件+AT工具
 # CONFIG_PACKAGE_luci-app-cpe=y
 # CONFIG_PACKAGE_sendat=y
-CONFIG_PACKAGE_sms-tool=y
-CONFIG_PACKAGE_luci-app-modem=y
-CONFIG_PACKAGE_kmod-qmi_wwan_q=y
+# CONFIG_PACKAGE_sms-tool=y
+# CONFIG_PACKAGE_luci-app-modem=y
+# CONFIG_PACKAGE_kmod-qmi_wwan_q=y
 # CONFIG_PACKAGE_kmod-qmi_wwan_f=y
 # CONFIG_PACKAGE_kmod-qmi_wwan_m=y
 # CONFIG_PACKAGE_kmod-qmi_wwan_t=y
